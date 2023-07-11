@@ -17,9 +17,9 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
   const getTextAlign = () => {
-    return i18n.language === "ur" ? "text-right " : "text-left";
+    return i18n.language === "ur"  ? "text-right " : "text-left";
   };
-
+  console.log(t('translation.greeting'))
   return (
     <>
       <Head>
@@ -33,9 +33,11 @@ export default function Home() {
             <div
               className={`lg:px-72 py-[40px] px-[10px] index font-bold tracking-[2px] pt-3 ${getTextAlign()}`}
             >
-              <h2 className="text-[30px]  text-red-700">{t("title")}</h2>
+              <h2 className="text-[30px]  text-red-700">{t("translation.title")}</h2>
 
-              <p>{t("greeting")}</p>
+              <p>{t('translation.greeting')}</p>
+             
+             
               <img
                 src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg"
                 width={300}
